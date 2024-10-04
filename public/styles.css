@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+body {
+  background-image: url(./assets/img3.jpg);
+  background-size: 1500px;
+}
+
+#seleccionar-mascota {
+  font-family: 'Sedgwick Ave Display', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo {
+  color: white;
+  font-size: 52px;
+  font-family: 'Sedgwick Ave Display', cursive;
+}
+
+.subtitulo {
+  font-family: 'Sedgwick Ave Display', cursive;
+  color: white;
+  font-size: 38px;
+}
+
+.tarjetas, .tarjetas-ataques {
+  display: flex;
+  gap: 25px;
+}
+
+.tarjeta-de-mokepon {
+  width: 180px;
+  height: 100px;
+  background: #11468F;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Sedgwick Ave Display', cursive;
+  border: 2px solid white;
+}
+
+.tarjeta-de-mokepon img {
+  width: 80px;
+}
+
+#boton-mascota {
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  background: #11468F;
+  border: 2px solid white;
+  color: white;
+  font-family: 'Sedgwick Ave Display', cursive;
+  margin-top: 30px;
+}
+
+input {
+  display: none;
+}
+input:checked  + label {
+  background-color: rgba(255, 0, 0, 0.46);
+}
+
+#seleccionar-ataque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boton-de-ataque {
+  background-color: #11468F;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border-color: transparent;
+  width: 80px;
+  color: white;
+  border: 2px solid white;
+}
+
+#mensajes {
+  width: 280px;
+  background: #11468F;
+  padding: 20px;
+  color: white;
+  margin-top: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid white;
+  font-family: 'Sedgwick Ave Display', cursive;
+}
+
+#boton-reiniciar {
+  
+  border-radius:  20px;
+  color:white;
+  border: 2px solid white;
+  background-color: transparent;
+  font-family: 'Sedgwick Ave Display', cursive;
+}
+
+.ataques {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  color: white;
+}
+
+#vidas-jugador, #vidas-enemigo {
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.ataques-jugador, .ataques-enemigo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#ver-mapa {
+  border:#11468F;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#ver-mapa button {
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  background: #11468F;
+  border: 2px solid white;
+  color: white;
+  font-family: 'Sedgwick Ave Display', cursive;
+  margin: 10px 0;
+}
+
+@media (max-width: 560px) {
+  .tarjetas, .tarjetas-ataques {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 300px) {
+  #ver-mapa div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}

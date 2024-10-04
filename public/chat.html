@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat IA</title>
+    <style>
+        /* Estilos predefinidos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            height: 100vh;
+            display: flex;
+            color: #e0e0e0;
+        }
+
+        .chat-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: #111111;
+        }
+
+        .chat-header {
+            padding: 1.5rem;
+            background-color: #161616;
+            border-bottom: 1px solid #222222;
+        }
+
+        .chat-header h1 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        .chat-messages {
+            flex-grow: 1;
+            padding: 1.5rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .message {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            max-width: 80%;
+            opacity: 0;
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .message.user {
+            margin-left: auto;
+            flex-direction: row-reverse;
+        }
+
+        .avatar {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+
+        .bot .avatar {
+            background-color: #2d2d2d;
+            color: #ffffff;
+        }
+
+        .user .avatar {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .message-content {
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.9375rem;
+            line-height: 1.5;
+        }
+
+        .bot .message-content {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+        .user .message-content {
+            background-color: #2563eb;
+            color: #ffffff;
+        }
+
+        .input-container {
+            padding: 1.5rem;
+            background-color: #161616;
+            border-top: 1px solid #222222;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .message-input {
+            flex-grow: 1;
+            padding: 0.75rem 1rem;
+            background-color: #1a1a1a;
+            border: 1px solid #333333;
+            border-radius: 0.5rem;
+            color: #ffffff;
+            font-size: 0.9375rem;
+        }
+
+        .message-input:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .send-button {
+            padding: 0.75rem 1.5rem;
+            background-color: #2563eb;
+            border: none;
+            border-radius: 0.5rem;
+            color: #ffffff;
+            font-size: 0.9375rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .send-button:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Rodrigo Quantum (R.Q.)</h1>
+        </div>
+        <div class="chat-messages">
+            <div class="message bot">
+                <div class="avatar">AI</div>
+                <div class="message-content">Hola, ¿en qué puedo ayudarte hoy?</div>
+            </div>
+        </div>
+        <div class="input-container">
+            <input type="text" class="message-input" placeholder="Escribe un mensaje...">
+            <button class="send-button">Enviar</button>
+        </div>
+    </div>
+
+    <!-- Incluir el archivo de configuración  siuuuuu -->
+    <script src="config.js"></script>
+</body>
+</html>
